@@ -43,13 +43,13 @@ git clone https://github.com/Vaixle/proof-of-work
 docker network create pow-network 
 ```
 ```
-docker build -t pow-server -f ./docker/Dockerfile.server
+docker build -t pow-server -f ./docker/Dockerfile.server .
 ```
 ```
 docker run --network pow-network --name pow-server -p 8088:8088 -it pow-server
 ```
 ```
-docker build -t pow-client -f ./docker/Dockerfile.client 
+docker build -t pow-client -f ./docker/Dockerfile.client . 
 ```
 ```
 docker run --network pow-network -it pow-client
