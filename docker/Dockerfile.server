@@ -1,0 +1,26 @@
+ARG GO_VERSION=1.21
+
+FROM golang:${GO_VERSION}-alpine AS builder
+
+WORKDIR ${GOPATH}/src/proof-of-work
+
+COPY ../go.mod ${GOPATH}/src/proof-of-work
+COPY ../go.sum ${GOPATH}/src/proof-of-work
+RUN go mod download
+
+COPY ../cmd/app/server/server.go ${GOPATH}/src/proof-of-work
+COPY ../config ${GOPATH}/src/proof-of-work/config
+COPY ../internal ${GOPATH}/src/proof-of-work/internal
+COPY ../pkg ${GOPATH}/src/proof-of-work/pkg
+
+RUN go build -o /app server.go
+
+FROM alpine:latest
+
+WORKDIR /api
+COPY --from=builder /app .
+COPY --from=builder /go/src/proof-of-work/config ./config
+
+EXPOSE 8088
+
+CMD ["/api/app"]

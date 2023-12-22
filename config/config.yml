@@ -1,0 +1,10 @@
+port:
+  server: 8088
+
+host:
+  server: pow-server
+
+pow:
+  difficulty_bites:
+    24
+
