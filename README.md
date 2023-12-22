@@ -54,6 +54,7 @@ docker run --network pow-network --name pow-server -p 8088:8088 -it pow-server
 ```
 docker build -t pow-client -f ./docker/Dockerfile.client . 
 ```
+> Run request with TCP connection
 ```
 docker run --network pow-network -it pow-client
 ```
