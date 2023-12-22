@@ -1,6 +1,7 @@
 # proof-of-work
+![image](https://github.com/Vaixle/proof-of-work/assets/58184233/5e25f27c-a2a3-4a64-ac49-3318aa2bd84b)
 
-![Proof of work](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Proof_of_Work_challenge_response.svg/825px-Proof_of_Work_challenge_response.svg.png)
+Proof of work (PoW) is a form of cryptographic proof in which one party (the prover) proves to others (the verifiers) that a certain amount of a specific computational effort has been expended.[1] Verifiers can subsequently confirm this expenditure with minimal effort on their part. The concept was invented by Moni Naor and Cynthia Dwork in 1993 as a way to deter denial-of-service attacks and other service abuses such as spam on a network by requiring some work from a service requester, usually meaning processing time by a computer. The term "proof of work" was first coined and formalized in a 1999 paper by Markus Jakobsson and Ari Juels.
 
 ## Conntents:
 
@@ -13,8 +14,7 @@
 
 ### Description
 - A protected TCP server with the challenge-response.
-- The choice of the POW algorithm should be explained.
--  After Proof Of Work verification, server send one of the quotes from “word of wisdom” book.
+- After Proof Of Work verification, server send one of the quotes from “word of wisdom” book.
 
 
 ---
